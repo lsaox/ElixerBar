@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elixer Uptown • Dallas</title>
+<link rel="stylesheet" href="style.css">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'Roman';
+    src: url('assets/fonts/Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>
+  <style>
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    html { scroll-behavior: smooth; }
+    /* keep anchor jumps from hiding behind fixed nav */
+    section { scroll-margin-top: 100px; }
+  </style>
+</head>
+
+<body class="bg-black text-white antialiased">
+  <!-- NAV (transparent / no background) -->
+  <header class="fixed top-0 left-0 w-full z-50">
+    <nav class="px-4 sm:px-6 lg:px-10">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex items-center justify-between py-6">
+          <!-- Brand -->
+        <a href="#top" class="flex items-center gap-3 no-underline text-white">
+  <!-- LOGO IMAGE -->
+  <img
+    src="assets/logo.png"
+    alt="Elixer Uptown"
+class="h-20 sm:h-20 md:h-18 w-auto object-contain"  />
+
+  <!-- LOCATION TEXT -->
+  <div class="leading-tight">
+    <div class="text-[15px] text-white/60 tracking-widest uppercase">
+      Uptown • Dallas 
+    </div>
+  </div>
+</a>
+
+
+          <!-- Desktop links -->
+          <div class="hidden md:flex items-center gap-8">
+<a class="nav-link text-sm font-medium text-white/70" href="#menu">Menu</a>
+<a class="nav-link text-sm font-medium text-white/70" href="#events">Events</a>
+<a class="nav-link text-sm font-medium text-white/70" href="#gallery">Gallery</a>
+<a class="nav-link text-sm font-medium text-white/70" href="#location">Location</a>
+
+            <a href="#Inquire"
+               class="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold
+                      bg-white text-black hover:bg-white/90 transition shadow-sm">
+                 Inquire
+            </a>
+          </div>
+
+          <!-- Mobile button -->
+          <button id="menuBtn"
+            class="md:hidden inline-flex items-center justify-center rounded-xl p-2 hover:bg-white/10 transition"
+            aria-label="Open menu" aria-expanded="false">
+            <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/>
+            </svg>
+            <svg id="iconClose" class="hidden" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu (glassy) -->
+      <div id="mobileMenu"
+           class="md:hidden mx-auto max-w-7xl overflow-hidden
+                  max-h-0 opacity-0 translate-y-[-6px]
+                  transition-all duration-300 ease-out">
+        <div class="rounded-2xl border border-white/10 bg-black/70 backdrop-blur-xl shadow-xl p-4">
+          <div class="flex flex-col gap-2">
+            <a class="rounded-xl px-3 py-3 text-sm font-medium text-white/80 hover:bg-white/10 transition" href="#menu">Menu</a>
+            <a class="rounded-xl px-3 py-3 text-sm font-medium text-white/80 hover:bg-white/10 transition" href="#events">Events</a>
+            <a class="rounded-xl px-3 py-3 text-sm font-medium text-white/80 hover:bg-white/10 transition" href="#gallery">Gallery</a>
+            <a class="rounded-xl px-3 py-3 text-sm font-medium text-white/80 hover:bg-white/10 transition" href="#location">Location</a>
+
+            <a href="#Inquire"
+               class="mt-2 inline-flex items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold
+                      bg-white text-black hover:bg-white/90 transition">
+            Inquire
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main id="top" class="relative">
+    <!-- background: classy dark gradients -->
+ <div aria-hidden="true" class="absolute inset-0 overflow-hidden">
+  <div class="absolute inset-0 bg-[url('assets/hero.png')] bg-cover bg-center"></div>
+  <div class="absolute inset-0 bg-black/65"></div>
+</div>
+
+    <section class="relative">
+      <div class="container-fluid px-4 sm:px-6 lg:px-10">
+        <div class="mx-auto max-w-7xl pt-32 md:pt-40 pb-20 md:pb-28">
+          <div class="row align-items-center g-5">
+            <!-- Left -->
+            <div class="col-12 col-lg-7">
+              <div class="inline-flex items-center gap-2  px-3 py-2">
+              </div>
+
+            <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
+  Elixer Uptown
+  <span class="block text-white/50 font-normal">
+   Dallas
+  </span>
+</h1>
+
+             <p class="mt-4 text-base sm:text-lg text-white/70 max-w-2xl leading-relaxed">
+  Cocktails, atmosphere, and a room that speaks for itself.
+  A polished Uptown bar built for nights well spent.
+</p>
+
+              <div class="mt-7 flex flex-col sm:flex-row gap-3">
+                <a href="#reservations"
+                   class="inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold
+                          bg-white text-black hover:bg-white/90 transition shadow-sm">
+                  Book a Table
+                </a>
+
+                <a href="#menu"
+                   class="inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold
+                          border border-white/20 text-white hover:bg-white/10 transition">
+                  View Menu
+                </a>
+              </div>
+
+              <div class="mt-10 flex flex-wrap gap-3 text-sm text-white/60">
+                <span class="inline-flex items-center gap-2 ">
+              
+                </span>
+            
+              </div>
+            </div>
+
+            <!-- Right: hero card -->
+    <!-- Right: angled hero image (no card) -->
+<div class="col-12 col-lg-5">
+  <div class="relative flex justify-center lg:justify-end">
+    <!-- Optional glow behind -->
+    <div class="absolute -inset-6 rounded-[40px] blur-3xl bg-white/10 opacity-30"></div>
+
+    <!-- Angled image -->
+    <div class="relative w-[92%] sm:w-[80%] lg:w-[110%] max-w-[560px]">
+      <img
+        src="assets/drink.png"
+        alt="Elixer Uptown preview"
+        class="w-full h-auto select-none
+               [transform:perspective(1200px)_rotateY(-18deg)_rotateX(8deg)]
+               rounded-2xl
+               shadow-[0_35px_90px_rgba(0,0,0,0.65)]
+               ring-1 ring-white/10"
+      />
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- EXPERIENCE -->
+<section id="experience" class="relative py-28 border-t border-white/10 bg-black overflow-hidden">
+
+  <!-- Subtle background glow -->
+  <div aria-hidden="true" class="absolute inset-0">
+    <div class="absolute -top-24 left-1/2 -translate-x-1/2 h-72 w-[42rem] rounded-full bg-white/10 blur-3xl opacity-20"></div>
+    <div class="absolute -bottom-24 right-0 h-72 w-72 rounded-full bg-white/10 blur-3xl opacity-10"></div>
+  </div>
+
+  <div class="relative container-fluid px-4 sm:px-6 lg:px-10">
+    <div class="mx-auto max-w-6xl">
+
+      <!-- Header -->
+      <header class="text-center mb-14">
+        <p class="text-xs tracking-widest uppercase text-white/50">
+          What sets the room apart
+        </p>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight">
+          The Experience
+        </h2>
+        <p class="mt-4 text-white/60 max-w-2xl mx-auto leading-relaxed">
+          Elevated cocktails, curated sound, and a space built for late-night conversations.
+        </p>
+      </header>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+        <!-- Card 1 -->
+        <section data-reveal
+          class="group relative h-[320px] sm:h-[360px] rounded-3xl overflow-hidden
+                 border border-white/10
+                 opacity-0 translate-y-6 transition-all duration-500 ease-out">
+
+          <img src="assets/square1.png" alt="Crafted cocktails"
+               class="absolute inset-0 h-full w-full object-cover
+                      transition-transform duration-700 group-hover:scale-105" />
+
+          <div class="absolute inset-0 bg-black/65"></div>
+
+          <div class="relative h-full p-7 sm:p-8 flex flex-col justify-end">
+            <h3 class="text-xl font-semibold tracking-tight">Crafted Cocktails</h3>
+            <p class="mt-2 text-sm text-white/70 leading-relaxed max-w-sm">
+              Precision-built drinks using premium spirits and thoughtful balance.
+            </p>
+          </div>
+        </section>
+
+        <!-- Card 2 -->
+        <section data-reveal
+          class="group relative h-[320px] sm:h-[360px] rounded-3xl overflow-hidden
+                 border border-white/10
+                 opacity-0 translate-y-6 transition-all duration-500 ease-out">
+
+          <img src="assets/square2.png" alt="Curated sound"
+               class="absolute inset-0 h-full w-full object-cover
+                      transition-transform duration-700 group-hover:scale-105" />
+
+          <div class="absolute inset-0 bg-black/65"></div>
+
+          <div class="relative h-full p-7 sm:p-8 flex flex-col justify-end">
+            <h3 class="text-xl font-semibold tracking-tight">Made by the best</h3>
+            <p class="mt-2 text-sm text-white/70 leading-relaxed max-w-sm">
+Experience shaped by those who know the craft.            </p>
+          </div>
+        </section>
+
+        <!-- Card 3 -->
+        <section data-reveal
+          class="group relative h-[320px] sm:h-[360px] rounded-3xl overflow-hidden
+                 border border-white/10
+                 opacity-0 translate-y-6 transition-all duration-500 ease-out">
+
+          <img src="assets/square3.png" alt="Late-night atmosphere"
+               class="absolute inset-0 h-full w-full object-cover
+                      transition-transform duration-700 group-hover:scale-105" />
+
+          <div class="absolute inset-0 bg-black/65"></div>
+
+          <div class="relative h-full p-7 sm:p-8 flex flex-col justify-end">
+            <h3 class="text-xl font-semibold tracking-tight">Late-Night Energy</h3>
+            <p class="mt-2 text-sm text-white/70 leading-relaxed max-w-sm">
+              A polished Uptown crowd and an atmosphere that stays alive past midnight.
+            </p>
+          </div>
+        </section>
+
+        <!-- Card 4 -->
+        <section data-reveal
+          class="group relative h-[320px] sm:h-[360px] rounded-3xl overflow-hidden
+                 border border-white/10
+                 opacity-0 translate-y-6 transition-all duration-500 ease-out">
+
+          <img src="assets/square4.png" alt="Room details"
+               class="absolute inset-0 h-full w-full object-cover
+                      transition-transform duration-700 group-hover:scale-105" />
+
+          <div class="absolute inset-0 bg-black/65"></div>
+
+          <div class="relative h-full p-7 sm:p-8 flex flex-col justify-end">
+            <h3 class="text-xl font-semibold tracking-tight">Room Details</h3>
+            <p class="mt-2 text-sm text-white/70 leading-relaxed max-w-sm">
+              Dim lighting, clean design, and a space built for conversation.
+            </p>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- CTA BUTTONS -->
+      <div class="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4">
+
+        <a href="#reservations"
+           class="inline-flex items-center justify-center rounded-full
+                  px-7 py-3 text-sm font-semibold
+                  bg-white text-black hover:bg-white/90 transition
+                  shadow-[0_15px_40px_rgba(255,255,255,0.15)]">
+          Book a Table
+        </a>
+
+        <a href="#buyouts"
+           class="inline-flex items-center justify-center rounded-full
+                  px-7 py-3 text-sm font-semibold
+                  border border-white/25 text-white
+                  hover:bg-white/10 transition">
+          Venue Buyouts
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ABOUT -->
+<section id="about" class="relative py-24 border-t border-white/10 bg-black">
+  <div class="container-fluid px-4 sm:px-6 lg:px-10">
+    <div class="mx-auto max-w-4xl text-center">
+
+      <!-- Title -->
+      <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">
+        Elixer Uptown
+      </h2>
+
+      <!-- Feature line -->
+      <p class="mt-3 text-sm tracking-widest uppercase text-white/50">
+        DJs • Industry Nights • Patio • Live Sports
+      </p>
+
+      <!-- Description -->
+      <p class="mt-6 text-base sm:text-lg text-white/70 leading-relaxed max-w-2xl mx-auto">
+        Elixer Uptown is a refined cocktail bar in the heart of Uptown Dallas.
+        Known for crafted drinks, curated music, and a polished yet relaxed atmosphere,
+        it’s a space designed for conversation, late nights, and familiar faces.
+      </p>
+
+      <!-- Info grid -->
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+
+        <!-- Hours -->
+        <div class="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-6">
+          <div class="text-xs tracking-widest uppercase text-white/50">
+            Hours
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-white/70">
+            <li class="flex justify-between">
+              <span class="text-white/50">Everyday</span>
+              <span>10:00 PM – 2:00 AM</span>
+            </li>
+       
+          </ul>
+        </div>
+
+        <!-- Details -->
+        <div class="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-6">
+          <div class="text-xs tracking-widest uppercase text-white/50">
+            Details
+          </div>
+          <ul class="mt-4 space-y-3 text-sm text-white/70">
+            <li class="flex justify-between">
+              <span class="text-white/50">Location</span>
+              <span>Uptown Dallas</span>
+            </li>
+            <li class="flex justify-between">
+              <span class="text-white/50">Age Policy</span>
+              <span>21+ </span>
+            </li>
+            <li class="flex justify-between">
+              <span class="text-white/50">Dress Code</span>
+              <span>Upscale casual</span>
+            </li>
+            <li class="flex justify-between">
+              <span class="text-white/50">Parking</span>
+              <span>Street & nearby garage</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="relative py-32 bg-black border-t border-white/10 overflow-hidden">
+
+  <!-- Decorative offset images -->
+  <img
+    src="assets/menuleft.png"
+    alt=""
+    class="hidden lg:block absolute left-0 top-32 w-[320px] h-[420px] object-cover
+           rounded-r-3xl opacity-50"
+  />
+
+  <img
+    src="assets/menuright.png"
+    alt=""
+    class="hidden lg:block absolute right-0 bottom-32 w-[320px] h-[420px] object-cover
+           rounded-l-3xl opacity-50"
+  />
+
+  <div class="relative container-fluid px-4 sm:px-6 lg:px-10">
+    <div class="mx-auto max-w-4xl">
+
+      <!-- Header -->
+      <header class="text-center mb-20">
+        <p class="text-xs tracking-widest uppercase text-white/50">
+          Signature Cocktails
+        </p>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight">
+          Êlixir Cocktail Menu
+        </h2>
+        <p class="mt-4 text-white/60 max-w-2xl mx-auto leading-relaxed">
+          Crafted with intention. Poured with precision.
+        </p>
+      </header>
+
+      <!-- Menu list -->
+      <div class="space-y-12">
+
+        <!-- Item -->
+        <div class="flex flex-col gap-2 border-b border-white/10 pb-6">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-lg font-semibold tracking-tight">The Êlixir</h3>
+            <span class="text-sm text-white/70">$32 / $16</span>
+          </div>
+          <p class="text-sm text-white/60">
+            Clase Blanco or Well • Olive Juice • Orange Liqueur • Orange Juice
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-2 border-b border-white/10 pb-6">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-lg font-semibold tracking-tight">Watermelon Martini</h3>
+            <span class="text-sm text-white/70">$14</span>
+          </div>
+          <p class="text-sm text-white/60">
+            Deep Eddy’s Lemon • Simple Syrup • Watermelon Pucker • Sour
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-2 border-b border-white/10 pb-6">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-lg font-semibold tracking-tight">The Oldest of Fashion</h3>
+            <span class="text-sm text-white/70">$16</span>
+          </div>
+          <p class="text-sm text-white/60">
+            Angel’s Envy • Orange Bitters • Simple Syrup • Orange Peel
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-2 border-b border-white/10 pb-6">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-lg font-semibold tracking-tight">Absolut Pear Martini</h3>
+            <span class="text-sm text-white/70">$15</span>
+          </div>
+          <p class="text-sm text-white/60">
+            Absolut Pear Vodka • Simple Syrup • Amaretto • Lemon Juice
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-2 border-b border-white/10 pb-6">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-lg font-semibold tracking-tight">Uptown Spice</h3>
+            <span class="text-sm text-white/70">$14</span>
+          </div>
+          <p class="text-sm text-white/60">
+            El Toro Blanco • Agave Nectar • Jalapeño • Lime Juice
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-2 border-b border-white/10 pb-6">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-lg font-semibold tracking-tight">PB&J Smack</h3>
+            <span class="text-sm text-white/70">$15</span>
+          </div>
+          <p class="text-sm text-white/60">
+            Screwball • Cranberry • Grenadine
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-2 border-b border-white/10 pb-6">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-lg font-semibold tracking-tight">Blue Boy</h3>
+            <span class="text-sm text-white/70">$14</span>
+          </div>
+          <p class="text-sm text-white/60">
+            Deep Eddy’s Lemon • Sour • Blueberry Red Bull
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-lg font-semibold tracking-tight">Whiskey Sour</h3>
+            <span class="text-sm text-white/70">$14</span>
+          </div>
+          <p class="text-sm text-white/60">
+            Well or Call Whiskey • Sour • Simple Syrup
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- CONTACT (Netlify Forms Connected) -->
+<section id="contact" class="relative py-32 bg-black border-t border-white/10 overflow-hidden">
+
+  <!-- Soft gold glow -->
+  <div aria-hidden="true" class="absolute inset-0">
+    <div class="absolute right-0 top-1/3 h-72 w-72 bg-[#C9A24D]/20 blur-3xl opacity-20"></div>
+  </div>
+
+  <div class="relative container-fluid px-4 sm:px-6 lg:px-10">
+    <div class="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Image -->
+      <div class="relative aspect-[4/5] rounded-3xl overflow-hidden border border-white/10">
+        <img
+          src="assets/connect.png"
+          alt="Êlixir Uptown interior"
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/40"></div>
+
+        <div class="absolute bottom-0 p-6">
+          <p class="text-sm tracking-widest uppercase text-white/60">
+            By Request
+          </p>
+          <h3 class="mt-1 text-xl font-semibold tracking-tight">
+            Reservations & Private Events
+          </h3>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div>
+        <p class="text-xs tracking-widest uppercase text-white/50">
+          Get in Touch
+        </p>
+
+        <h2 class="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight">
+          Contact Êlixir Uptown
+        </h2>
+
+        <p class="mt-4 text-white/60 leading-relaxed max-w-xl">
+          For table reservations, venue buyouts, or private inquiries,
+          please reach out using the form below. Our team will respond promptly.
+        </p>
+
+        <!-- ✅ NETLIFY FORM (CONNECTED) -->
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/thanks.html"
+          class="mt-10 space-y-6"
+        >
+          <!-- required for Netlify -->
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div>
+            <label class="block text-xs tracking-widest uppercase text-white/50 mb-2">
+              Name
+            </label>
+            <input
+              name="name"
+              type="text"
+              required
+              placeholder="Your name"
+              class="w-full rounded-xl bg-white/5 border border-white/10
+                     px-4 py-3 text-sm text-white placeholder-white/40
+                     focus:outline-none focus:border-[#C9A24D]/60"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs tracking-widest uppercase text-white/50 mb-2">
+              Email
+            </label>
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="you@email.com"
+              class="w-full rounded-xl bg-white/5 border border-white/10
+                     px-4 py-3 text-sm text-white placeholder-white/40
+                     focus:outline-none focus:border-[#C9A24D]/60"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs tracking-widest uppercase text-white/50 mb-2">
+              Message
+            </label>
+            <textarea
+              name="message"
+              rows="4"
+              required
+              placeholder="Tell us about your reservation or event..."
+              class="w-full rounded-xl bg-white/5 border border-white/10
+                     px-4 py-3 text-sm text-white placeholder-white/40
+                     focus:outline-none focus:border-[#C9A24D]/60"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="inline-flex items-center justify-center rounded-full
+                   px-8 py-3 text-sm font-semibold
+                   bg-white text-black hover:bg-white/90 transition
+                   shadow-[0_15px_40px_rgba(255,255,255,0.15)]"
+          >
+            Submit Inquiry
+          </button>
+
+          <!-- optional: quick contact line -->
+          <p class="text-xs text-white/45 pt-2">
+            Prefer direct? Call
+            <a href="tel:12142729700" class="hover:text-[#C9A24D] transition">(214) 272-9700</a>
+          </p>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="relative bg-black border-t border-white/10 overflow-hidden">
+
+  <!-- Soft gold glow background -->
+  <div aria-hidden="true" class="absolute inset-0">
+    <div class="absolute left-1/2 top-0 -translate-x-1/2 h-40 w-[42rem]
+                bg-[#C9A24D]/20 blur-3xl opacity-30"></div>
+  </div>
+
+  <div class="relative container-fluid px-4 sm:px-6 lg:px-10">
+    <div class="mx-auto max-w-6xl py-20">
+
+      <!-- Logo -->
+      <div class="flex justify-center mb-10">
+        <img
+          src="assets/logo.png"
+          alt="Êlixir Uptown"
+          class="h-20 w-auto opacity-90"
+        />
+      </div>
+
+      <!-- Location + Contact -->
+      <div class="text-center space-y-3">
+        <p class="text-sm tracking-widest uppercase text-white/50">
+          Uptown • Dallas
+        </p>
+
+        <p class="text-sm text-white/60">
+          2714 McKinney Ave, Dallas, TX 75204
+        </p>
+
+        <p class="text-sm text-white/60">
+          <a href="tel:12142729700" class="hover:text-[#C9A24D] transition">
+            (214) 272-9700
+          </a>
+        </p>
+
+        <p class="text-sm text-white/60">
+          <a href="https://elixiruptown.com" target="_blank"
+             class="hover:text-[#C9A24D] transition">
+            View Cocktail Menu
+          </a>
+        </p>
+      </div>
+
+      <!-- Divider -->
+      <div class="my-12 h-px w-full bg-gradient-to-r
+                  from-transparent via-[#C9A24D]/40 to-transparent"></div>
+
+      <!-- Bottom row -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+
+        <!-- Copyright + credit -->
+        <div class="text-center sm:text-left space-y-1">
+          <p class="text-xs text-white/40">
+            © <span id="year"></span> Êlixir Uptown. All rights reserved.
+          </p>
+
+          <p class="text-[11px] text-white/35 tracking-wide">
+            Made by
+            <a href="https://EliseoWebDev.com" target="_blank"
+               class="hover:text-[#C9A24D] transition">
+              EliseoWebDev.com
+            </a>
+          </p>
+        </div>
+
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/YOURINSTAGRAM"
+          target="_blank"
+          aria-label="Instagram"
+          class="group inline-flex items-center justify-center h-11 w-11
+                 rounded-full border border-[#C9A24D]/40
+                 hover:border-[#C9A24D] transition"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none"
+               class="h-5 w-5 text-[#C9A24D]/80 group-hover:text-[#C9A24D] transition">
+            <rect x="3" y="3" width="18" height="18" rx="5"
+                  stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4"
+                    stroke="currentColor" stroke-width="2"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+          </svg>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const revealEls = document.querySelectorAll('[data-reveal]');
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+
+      const i = [...revealEls].indexOf(e.target);
+      e.target.style.transitionDelay = `${Math.min(i * 90, 270)}ms`;
+
+      e.target.classList.remove('opacity-0', 'translate-y-6');
+      e.target.classList.add('opacity-100', 'translate-y-0');
+
+      obs.unobserve(e.target);
+    });
+  }, { threshold: 0.15 });
+
+  revealEls.forEach(el => obs.observe(el));
+</script>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    const iconOpen = document.getElementById('iconOpen');
+    const iconClose = document.getElementById('iconClose');
+
+    let open = false;
+
+    function setMenu(state) {
+      open = state;
+      btn.setAttribute('aria-expanded', String(open));
+      iconOpen.classList.toggle('hidden', open);
+      iconClose.classList.toggle('hidden', !open);
+
+      if (open) {
+        menu.classList.remove('max-h-0', 'opacity-0', 'translate-y-[-6px]');
+        menu.classList.add('max-h-[520px]', 'opacity-100', 'translate-y-0');
+      } else {
+        menu.classList.add('max-h-0', 'opacity-0', 'translate-y-[-6px]');
+        menu.classList.remove('max-h-[520px]', 'opacity-100', 'translate-y-0');
+      }
+    }
+
+    btn.addEventListener('click', () => setMenu(!open));
+
+    // Close menu when clicking a link
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => setMenu(false));
+    });
+
+    // Optional: shrink nav spacing on scroll (still transparent)
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      header.classList.toggle('backdrop-blur', window.scrollY > 10);
+      header.classList.toggle('bg-black/10', window.scrollY > 10);
+      header.classList.toggle('border-b', window.scrollY > 10);
+      header.classList.toggle('border-white/10', window.scrollY > 10);
+    });
+  </script>
+</body>
+</html>

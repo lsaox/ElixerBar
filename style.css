@@ -1,0 +1,16 @@
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roman', serif;
+    letter-spacing: 0.02em;
+  }
+/* Luxury gold hover effect */
+.nav-link {
+  transition: color 0.35s ease, text-shadow 0.35s ease;
+}
+
+.nav-link:hover {
+  color: #d4af37; /* classic luxury gold */
+  text-shadow:
+    0 0 6px rgba(212, 175, 55, 0.35),
+    0 0 12px rgba(212, 175, 55, 0.15);
+}
