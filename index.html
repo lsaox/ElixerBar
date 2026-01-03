@@ -662,91 +662,56 @@ Experience shaped by those who know the craft.            </p>
 
 
 
+<!-- FOOTER (Background Image – Compact Centered) -->
+<!-- FOOTER (Ultra-Compact Centered) -->
+<footer id="footer" class="relative border-t border-white/10 overflow-hidden">
 
-
-
-
-
-
-<!-- FOOTER -->
-<footer class="relative bg-black border-t border-white/10 overflow-hidden">
-
-  <!-- Soft gold glow background -->
-  <div aria-hidden="true" class="absolute inset-0">
-    <div class="absolute left-1/2 top-0 -translate-x-1/2 h-40 w-[42rem]
-                bg-[#C9A24D]/20 blur-3xl opacity-30"></div>
+  <!-- Background image -->
+  <div class="absolute inset-0">
+    <img
+      src="assets/footer19.png"
+      alt=""
+      class="h-full w-full object-cover opacity-55"
+    />
+    <div class="absolute inset-0 bg-black/75"></div>
   </div>
 
-  <div class="relative container-fluid px-4 sm:px-6 lg:px-10">
-    <div class="mx-auto max-w-6xl py-20">
+  <div class="relative px-4 sm:px-6 lg:px-10">
+    <div class="mx-auto max-w-4xl py-6 text-center">
 
       <!-- Logo -->
-      <div class="flex justify-center mb-10">
-        <img
-          src="assets/logo.png"
-          alt="Êlixir Uptown"
-          class="h-20 w-auto opacity-90"
-        />
-      </div>
+      <img
+        src="assets/logo.png"
+        alt="Êlixir Uptown"
+        class="mx-auto h-10 w-auto"
+      />
 
-      <!-- Location + Contact -->
-      <div class="text-center space-y-3">
-        <p class="text-sm tracking-widest uppercase text-white/50">
-          Uptown • Dallas
-        </p>
-
-        <p class="text-sm text-white/60">
+      <!-- Info -->
+      <div class="mt-2 space-y-0.5">
+        <p class="text-xs text-white/65">
           2714 McKinney Ave, Dallas, TX 75204
         </p>
 
-        <p class="text-sm text-white/60">
-          <a href="tel:12142729700" class="hover:text-[#C9A24D] transition">
-            (214) 272-9700
-          </a>
-        </p>
-
-        <p class="text-sm text-white/60">
-          <a href="https://elixiruptown.com" target="_blank"
-             class="hover:text-[#C9A24D] transition">
-            View Cocktail Menu
-          </a>
-        </p>
+        <a
+          href="tel:12142729700"
+          class="block text-xs text-white/65 hover:text-[#C9A24D] transition"
+        >
+          (214) 272-9700
+        </a>
       </div>
 
-      <!-- Divider -->
-      <div class="my-12 h-px w-full bg-gradient-to-r
-                  from-transparent via-[#C9A24D]/40 to-transparent"></div>
-
-      <!-- Bottom row -->
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
-
-        <!-- Copyright + credit -->
-        <div class="text-center sm:text-left space-y-1">
-          <p class="text-xs text-white/40">
-            © <span id="year"></span> Êlixir Uptown. All rights reserved.
-          </p>
-
-          <p class="text-[11px] text-white/35 tracking-wide">
-            Made by
-            <a href="https://EliseoWebDev.com" target="_blank"
-               class="hover:text-[#C9A24D] transition">
-              EliseoWebDev.com
-            </a>
-          </p>
-        </div>
-
-        <!-- Instagram -->
+      <!-- Instagram -->
+      <div class="mt-2 flex justify-center">
         <a
           href="https://www.instagram.com/YOURINSTAGRAM"
           target="_blank"
           aria-label="Instagram"
-          class="group inline-flex items-center justify-center h-11 w-11
-                 rounded-full border border-[#C9A24D]/40
-                 hover:border-[#C9A24D] transition"
+          class="group inline-flex items-center justify-center h-8 w-8
+                 rounded-full border border-white/15 bg-black/30
+                 hover:border-[#C9A24D]/70 hover:bg-black/45 transition"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-               fill="none"
-               class="h-5 w-5 text-[#C9A24D]/80 group-hover:text-[#C9A24D] transition">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+               class="h-3.5 w-3.5 text-white/80">
             <rect x="3" y="3" width="18" height="18" rx="5"
                   stroke="currentColor" stroke-width="2"/>
             <circle cx="12" cy="12" r="4"
@@ -754,8 +719,19 @@ Experience shaped by those who know the craft.            </p>
             <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
           </svg>
         </a>
-
       </div>
+
+      <!-- Credit -->
+      <p class="mt-2 text-[10px] text-white/40">
+        © <span id="year"></span> Êlixir Uptown ·
+        <a
+          href="https://EliseoWebDev.com"
+          target="_blank"
+          class="hover:text-[#C9A24D] transition"
+        >
+          EliseoWebDev
+        </a>
+      </p>
 
     </div>
   </div>
@@ -764,6 +740,12 @@ Experience shaped by those who know the craft.            </p>
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 
 
 
